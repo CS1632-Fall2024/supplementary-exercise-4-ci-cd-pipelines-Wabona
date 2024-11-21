@@ -83,19 +83,12 @@ public class RentACatImpl implements RentACat {
 
 		// Loop through every cat in the cat list
 		for (Cat c : cats) {
-			// If we found a cat whose id matches the id
-			// of the argument, then we have a match and
-			// can thus return a reference to that cat
 			if (c.getId() == id) {
 				return c;
 			}
 		}
-		// If we get all the way through the list and did
-		// not find a cat whose ID matches the passed-in
-		// ID, then the cat is not in the list
 		System.out.println("Invalid cat ID.");
 		return null;
-
 	}
 
 	/**

@@ -93,6 +93,7 @@ public class RentACatIntegrationTest {
 	@Test
 	public void testGetCatNullNumCats0() {
 		// TODO: Fill in
+
 	}
 
 	/**
@@ -127,6 +128,8 @@ public class RentACatIntegrationTest {
 	@Test
 	public void testListCatsNumCats0() {
 		// TODO: Fill in
+		String result = r.listCats();
+		assertEquals("", result);
 	}
 
 	/**
@@ -142,7 +145,9 @@ public class RentACatIntegrationTest {
 	@Test
 	public void testListCatsNumCats3() {
 		// TODO: Fill in
+		
 	}
+	
 
 	/**
 	 * Test case for boolean renameCat(int id, String name).
@@ -158,6 +163,10 @@ public class RentACatIntegrationTest {
 	@Test
 	public void testRenameFailureNumCats0() {
 		// TODO: Fill in
+		boolean approved = r.renameCat(2, "Garfield");
+		assertFalse(approved);
+		String expectedOutput = "Invalid cat ID." + newline;
+		assertEquals(expectedOutput, out.toString());
 	}
 
 	/**
